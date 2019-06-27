@@ -2,6 +2,7 @@ package com.github.hcsp.calculation;
 
 public class Solution {
     public static void main(String[] args) {
+        System.out.println("1是合法的十六进制字符:" + isValidHexCharacter('1'));
         System.out.println("A是合法的十六进制字符:" + isValidHexCharacter('A'));
         System.out.println("0是合法的十六进制字符:" + isValidHexCharacter('0'));
         System.out.println("G是合法的十六进制字符:" + isValidHexCharacter('G'));
@@ -11,7 +12,8 @@ public class Solution {
     // 编写一个方法，给定一个字符，若是合法的十六进制字符，返回true，否则返回false
     public static boolean isValidHexCharacter(char ch) {
         int num = (int)ch;
-        if((num >= 48 && num <= 57) || (num >= 65 && num <= 70) || (num >= 97 && num <= 102) ){
+        if((num >=  '0' && num <= '9') || (num >= 65 && num <= 70) || (num >= 97 && num <= 102) ){
+//        if((num >= 48 && num <= 57) || (num >= 65 && num <= 70) || (num >= 97 && num <= 102) ){
             return true;
         } else {
             return false;
